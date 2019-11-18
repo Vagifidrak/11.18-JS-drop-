@@ -1,0 +1,56 @@
+body {
+    background-image: url(../image/128.jpg)
+}
+
+.dropWrapper {
+    border: 1px solid rgb(172, 169, 169);
+    box-shadow: inset 0px 0px 15px 0px #a0a0a033;
+    padding: 80px;
+    border-radius: 15%;
+
+
+    .dropUp {
+        padding: 50px;
+        text-align: center;
+        color: #6b5a5ad0;
+        font-size: 2em;
+        border: 1px dashed #530c0c;
+        transition: all .3s ease-in-out;
+
+        p {
+            transition: all .3s ease-in-out;
+            font-size: 2em;
+        }
+
+        i {
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease-in-out;
+        }
+
+        &.active {
+            p {
+                transform: tranlateY(-50px);
+            }
+            i {
+                animation: ani 1s infinite;
+                visibility: visible;
+                opacity: 1;
+                pointer-events: none;
+            }
+        }
+
+        
+    }
+}
+
+@keyframes ani {
+    from {
+        transform: translateY(-25px);
+    }
+
+    to {
+        transform: translateY(25px);
+
+    }
+}
